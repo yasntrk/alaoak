@@ -1,54 +1,63 @@
-import { Search, Volume2, Plus, Users, CalendarCheck, Flame, BarChart3, Snowflake, Factory, Gauge } from 'lucide-react'
+import { Users, CalendarCheck, BarChart3, Snowflake, Factory, Gauge, Play } from 'lucide-react'
 import { Mark } from './Logo'
 import { cx } from '../lib/cx'
 
-/** Stylized in-app preview for Dico — a smart dictionary card on a phone. */
+/** Stylized preview for Dico — the pixel-art luck & fate game, on a phone. */
 export function DicoMock({ className }: { className?: string }) {
+  const stars: Array<[string, string]> = [
+    ['12%', '16%'], ['80%', '11%'], ['64%', '28%'], ['22%', '52%'],
+    ['88%', '58%'], ['38%', '76%'], ['73%', '84%'], ['14%', '80%'],
+  ]
   return (
     <div className={cx('relative mx-auto w-full max-w-[280px]', className)}>
       {/* phone frame */}
       <div className="rounded-[2.2rem] border border-line bg-ink/90 p-2.5 shadow-card">
-        <div className="overflow-hidden rounded-[1.7rem] bg-ivory">
-          {/* app top bar */}
-          <div className="flex items-center justify-between px-4 pb-3 pt-4">
-            <span className="inline-flex items-center gap-1.5 font-serif text-sm font-semibold text-forest">
-              <Mark className="h-5 w-5" /> Dico
+        <div
+          className="relative overflow-hidden rounded-[1.7rem]"
+          style={{ background: 'radial-gradient(130% 90% at 30% 15%, #3c2670 0%, #241544 48%, #160f2c 100%)' }}
+        >
+          {/* starfield */}
+          <div className="pointer-events-none absolute inset-0" aria-hidden>
+            {stars.map(([l, t], i) => (
+              <span
+                key={i}
+                className="absolute h-0.5 w-0.5 rounded-full bg-[#cfc0ff]"
+                style={{ left: l, top: t, opacity: 0.45 + (i % 3) * 0.2 }}
+              />
+            ))}
+          </div>
+
+          <div className="relative flex flex-col items-center px-6 py-10 text-center">
+            {/* wordmark */}
+            <span
+              className="font-mono text-[2rem] font-black leading-none tracking-[0.12em] text-[#f5c542]"
+              style={{ textShadow: '2px 2px 0 #a06a12' }}
+            >
+              DICO
             </span>
-            <span className="inline-flex items-center gap-1 rounded-full bg-gold/12 px-2 py-0.5 text-[10px] font-semibold text-gold">
-              <Flame size={10} /> 7
-            </span>
-          </div>
-          {/* search */}
-          <div className="mx-4 flex items-center gap-2 rounded-xl border border-line bg-surface px-3 py-2 text-xs text-muted">
-            <Search size={13} className="text-gold" />
-            <span className="font-medium text-ink">flourish</span>
-          </div>
-          {/* word card */}
-          <div className="m-4 rounded-xl border border-line bg-surface p-4 shadow-sm">
-            <div className="flex items-baseline justify-between">
-              <h4 className="font-serif text-lg font-semibold text-ink">flourish</h4>
-              <button className="inline-flex items-center gap-1 rounded-full bg-gold/12 px-2 py-1 text-[10px] font-semibold text-gold">
-                <Plus size={10} /> Save
-              </button>
+
+            {/* dice-with-eye mascot */}
+            <div className="my-7" style={{ filter: 'drop-shadow(0 0 14px rgba(150,120,240,0.55))' }}>
+              <svg width="88" height="88" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="14" y="14" width="52" height="52" rx="16" fill="#e7defa" />
+                <circle cx="26" cy="29" r="2.6" fill="#241542" />
+                <circle cx="31" cy="53" r="2.6" fill="#241542" />
+                <path d="M23 40 L29 44 L25 49" stroke="#241542" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="48" cy="40" r="13" fill="#ffffff" />
+                <circle cx="50" cy="41" r="6.5" fill="#3a2a6a" />
+                <circle cx="52.5" cy="38.5" r="2" fill="#ffffff" />
+                <circle cx="40" cy="8" r="2.6" fill="#a897ec" />
+                <line x1="40" y1="14" x2="40" y2="11" stroke="#a897ec" strokeWidth="2" strokeLinecap="round" />
+              </svg>
             </div>
-            <div className="mt-1 flex items-center gap-2 text-[11px] text-muted">
-              <span>/ˈflʌrɪʃ/</span>
-              <Volume2 size={12} className="text-forest" />
-              <span className="italic">verb</span>
-            </div>
-            <p className="mt-2 text-[11px] leading-relaxed text-ink/80">
-              To grow or develop in a healthy, vigorous way, especially as the result of a good environment.
-            </p>
-            <p className="mt-2 border-l-2 border-gold/40 pl-2 text-[11px] italic leading-relaxed text-muted">
-              “Small teams flourish when the tools grow with them.”
-            </p>
-          </div>
-          {/* review progress */}
-          <div className="mx-4 mb-5 flex items-center gap-2">
-            <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-line">
-              <div className="h-full w-3/4 rounded-full bg-gradient-to-r from-forest to-gold" />
-            </div>
-            <span className="text-[10px] font-semibold text-muted">12/16</span>
+
+            {/* tagline */}
+            <span className="text-[11px] tracking-wide text-[#bcaef0]">kaderi oku, şansı ayarla</span>
+
+            {/* play button */}
+            <button className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-[#f5c542] px-6 py-2 text-xs font-extrabold uppercase tracking-wide text-[#241542]">
+              <Play size={12} className="fill-[#241542]" /> Oyna
+            </button>
           </div>
         </div>
       </div>

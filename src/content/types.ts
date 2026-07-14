@@ -101,8 +101,10 @@ export interface Content {
 
 /** Shared, language-independent links. */
 export const LINKS = {
-  // TODO: replace with the real Google Play listing once published.
+  // TODO: replace with the real Dico Google Play listing URL.
   dicoPlayStore: 'https://play.google.com/store/apps/details?id=com.alaoak.dico',
+  // Playable web build of the Dico game.
+  dicoWeb: 'https://yasntrk.github.io/dico/',
   akceSite: 'https://ak-ce.com.tr/',
   email: 'hello@alaoak.com',
 }

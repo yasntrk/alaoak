@@ -49,27 +49,27 @@ export const tr: Content = {
   productsIntro: {
     eyebrow: 'İşlerimiz',
     heading: 'Ürünler ve projeler',
-    sub: 'Kendi iki uygulamamız ve başkaları için ürettiğimiz işler — ne yaptığımıza kısa bir bakış.',
+    sub: 'Oyunlar, uygulamalar ve başkaları için ürettiğimiz işler — ne yaptığımıza kısa bir bakış.',
   },
   products: [
     {
       id: 'dico',
       name: 'Dico',
-      category: 'Dil ve Öğrenme',
-      tagline: 'Akıllı sözlüğünüz ve dil arkadaşınız',
+      category: 'Mobil Oyun',
+      tagline: 'Kaderi oku, şansı ayarla',
       description:
-        'Dico, bir kelimeye bakmayı onu gerçekten öğrenmeye dönüştürür. Anlık ve bağlama duyarlı tanımlar ile çeviriler sunar; ardından kişiselleştirilmiş kelime çalışmasıyla önemli olanı hatırlamanıza yardımcı olur. Dil becerilerini geliştirmek isteyen herkes için sade, hızlı ve mobil öncelikli bir arkadaş.',
+        'Dico, şans ve kader üzerine kurulu pixel-art bir oyun. İşaretleri oku, şansı kendi lehine çevir ve biraz şansın seni nereye götürebileceğini gör — rüya gibi kozmik bir dünyada kısa ve atmosferik bir maceraya atıl.',
       features: [
-        { title: 'Anlık tanımlar ve çeviriler', desc: 'Herhangi bir kelimeye bakın; saniyeler içinde diller arası net ve doğru anlamlar ile çeviriler elde edin.' },
-        { title: 'Bağlama duyarlı örnekler', desc: 'İhtiyacınız olan anlama uygun örnek cümlelerle kelimelerin gerçekte nasıl kullanıldığını görün.' },
-        { title: 'Kişiselleştirilmiş kelime çalışması', desc: 'Kelimeleri kaydedin ve öğrenme tarzınıza uyum sağlayan aralıklı tekrar yöntemiyle kalıcı hale getirin.' },
-        { title: 'Telaffuz desteği', desc: 'Kelimeleri dinleyip pratik yapın; yalnızca okumakla kalmayın, konuşurken de kendinize güvenin.' },
+        { title: 'Şans oyunun kendisi', desc: 'Kaderi oku, şansı ayarla — şans bir düşman değil, oyunun asıl mekaniği.' },
+        { title: 'Kozmik pixel-art', desc: 'Çıtır çıtır piksellerle örülü, rüya gibi mor bir evren ve ona yakışan bir atmosfer.' },
+        { title: 'Kısa ve tekrar oynanabilir', desc: 'Başlaması kolay; “bir tur daha” dedirten cinsten.' },
+        { title: 'Google Play ve web’de', desc: 'Telefonundan oyna ya da doğrudan tarayıcından atla.' },
       ],
-      platforms: ['Google Play', 'Android'],
+      platforms: ['Google Play', 'Android', 'Web'],
       status: 'Google Play’de',
       statusType: 'live',
       ctaKind: 'play',
-      cta: 'Dico’yu Google Play’den edinin',
+      cta: 'Dico’yu Google Play’den oyna',
       href: LINKS.dicoPlayStore,
     },
     {

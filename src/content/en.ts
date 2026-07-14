@@ -49,27 +49,27 @@ export const en: Content = {
   productsIntro: {
     eyebrow: 'Our Work',
     heading: 'Products & projects',
-    sub: 'Two apps of our own, and work we’ve crafted for others — a look at what we build.',
+    sub: 'Games, apps, and work we’ve crafted for others — a look at what we build.',
   },
   products: [
     {
       id: 'dico',
       name: 'Dico',
-      category: 'Language & Learning',
-      tagline: 'Your smart dictionary and language companion',
+      category: 'Mobile Game',
+      tagline: 'Read your fate, bend your luck',
       description:
-        'Dico turns looking up a word into actually learning it. Get instant, context-aware definitions and translations, then remember what matters with personalized vocabulary building. It’s a clean, fast, mobile-first companion for anyone growing their language skills.',
+        'Dico is a pixel-art game about luck and fate. Read the signs, tip chance in your favor, and see how far a little luck can take you — a bite-sized, atmospheric run through a dreamy cosmic world.',
       features: [
-        { title: 'Instant definitions & translations', desc: 'Look up any word and get clear, accurate meanings and translations across languages in seconds.' },
-        { title: 'Context-aware examples', desc: 'See how words are really used with example sentences that fit the meaning you need.' },
-        { title: 'Personalized vocabulary building', desc: 'Save words and lock them in with spaced repetition that adapts to how you learn.' },
-        { title: 'Pronunciation help', desc: 'Hear and practice words so you’re confident speaking, not just reading.' },
+        { title: 'Luck is the game', desc: 'Read your fate and bend your luck — chance is the mechanic, not the enemy.' },
+        { title: 'Cosmic pixel-art', desc: 'A dreamy purple universe in crunchy pixels, with a mood to match.' },
+        { title: 'Quick, replayable runs', desc: 'Easy to pick up, and made for “just one more try.”' },
+        { title: 'On Google Play & web', desc: 'Play on your phone, or jump straight in from your browser.' },
       ],
-      platforms: ['Google Play', 'Android'],
+      platforms: ['Google Play', 'Android', 'Web'],
       status: 'Available on Google Play',
       statusType: 'live',
       ctaKind: 'play',
-      cta: 'Get Dico on Google Play',
+      cta: 'Play Dico on Google Play',
       href: LINKS.dicoPlayStore,
     },
     {
