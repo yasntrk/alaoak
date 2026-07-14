@@ -1,0 +1,4 @@
+# Cloudflare Pages SPA fallback — serve the app for client-side routes
+# (so /tr and deep links resolve on refresh). Real files/assets are served
+# directly; this only applies when no matching file exists.
+/*    /index.html   200
