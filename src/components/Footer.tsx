@@ -15,10 +15,11 @@ export function Footer() {
   const columns: { title: string; links: FLink[] }[] = [
     {
       title: t.footer.columns[0].title,
-      links: [
-        { label: t.products[0].name, href: t.products[0].href, ext: t.products[0].href.startsWith('http') },
-        { label: t.products[1].name, href: '#products' },
-      ],
+      links: t.products.map((p) => ({
+        label: p.name,
+        href: p.href,
+        ext: p.href.startsWith('http'),
+      })),
     },
     {
       title: t.footer.columns[1].title,

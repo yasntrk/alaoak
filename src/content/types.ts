@@ -16,8 +16,10 @@ export interface Product {
   status: string
   /** 'live' → available now, 'soon' → coming soon (drives the status chip styling) */
   statusType: 'live' | 'soon'
+  /** Which CTA to render: Google Play badge, external site link, or waitlist button. */
+  ctaKind: 'play' | 'external' | 'waitlist'
   cta: string
-  /** Store / waitlist link. TODO: replace Dico's with the real Google Play URL. */
+  /** Store / site / waitlist link. TODO: replace Dico's with the real Google Play URL. */
   href: string
 }
 
@@ -101,5 +103,6 @@ export interface Content {
 export const LINKS = {
   // TODO: replace with the real Google Play listing once published.
   dicoPlayStore: 'https://play.google.com/store/apps/details?id=com.alaoak.dico',
+  akceSite: 'https://ak-ce.com.tr/',
   email: 'hello@alaoak.com',
 }

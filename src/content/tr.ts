@@ -47,9 +47,9 @@ export const tr: Content = {
     ],
   },
   productsIntro: {
-    eyebrow: 'Ürünlerimiz',
-    heading: 'İki ürün, tek stüdyo',
-    sub: 'Gerçek sorunları çözmek için özel olarak geliştirilmiş araçlar; biri öğrenenler, diğeri geleceği inşa eden ekipler için.',
+    eyebrow: 'İşlerimiz',
+    heading: 'Ürünler ve projeler',
+    sub: 'Kendi iki uygulamamız ve başkaları için ürettiğimiz işler — ne yaptığımıza kısa bir bakış.',
   },
   products: [
     {
@@ -68,6 +68,7 @@ export const tr: Content = {
       platforms: ['Google Play', 'Android'],
       status: 'Google Play’de',
       statusType: 'live',
+      ctaKind: 'play',
       cta: 'Dico’yu Google Play’den edinin',
       href: LINKS.dicoPlayStore,
     },
@@ -87,8 +88,29 @@ export const tr: Content = {
       platforms: ['Web', 'Google Play', 'Android'],
       status: 'Çok yakında',
       statusType: 'soon',
+      ctaKind: 'waitlist',
       cta: 'CoalaHR bekleme listesine katılın',
       href: '#contact',
+    },
+    {
+      id: 'akce',
+      name: 'Akçe Mühendislik',
+      category: 'Web Projesi',
+      tagline: 'Tasarlayıp geliştirdiğimiz kurumsal web sitesi',
+      description:
+        'Akçe Mühendislik için tasarlayıp geliştirdiğimiz modern ve çok dilli kurumsal web sitesi — kriyojenik tanklar ve endüstriyel gaz sistemleri alanında uzmanlaşmış, İstanbul merkezli bir mühendislik firması. Sade, hızlı ve uzmanlıklarını dünyaya sunmak için üretildi.',
+      features: [
+        { title: 'Çok dilli tasarım', desc: 'Dünya genelindeki müşterilere hitap etmek için çoklu dil seçeneğiyle.' },
+        { title: 'Hizmet ve yetkinlik vitrini', desc: 'Mühendislik uzmanlıkları ve ürün yelpazeleri net biçimde sunuldu.' },
+        { title: 'Duyarlı ve hızlı', desc: 'Her cihazda cilalı bir deneyim, hızlı yüklenir.' },
+        { title: 'Kurumsal ve güvenilir', desc: 'Uluslararası, standartlara bağlı bir firmayı yansıtan profesyonel bir görünüm.' },
+      ],
+      platforms: ['Web'],
+      status: 'Yayında',
+      statusType: 'live',
+      ctaKind: 'external',
+      cta: 'Siteyi ziyaret et',
+      href: LINKS.akceSite,
     },
   ],
   why: {

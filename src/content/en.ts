@@ -47,9 +47,9 @@ export const en: Content = {
     ],
   },
   productsIntro: {
-    eyebrow: 'Our Products',
-    heading: 'Two products, one studio',
-    sub: 'Purpose-built tools that solve real problems — one for learners, one for the teams building the future.',
+    eyebrow: 'Our Work',
+    heading: 'Products & projects',
+    sub: 'Two apps of our own, and work we’ve crafted for others — a look at what we build.',
   },
   products: [
     {
@@ -68,6 +68,7 @@ export const en: Content = {
       platforms: ['Google Play', 'Android'],
       status: 'Available on Google Play',
       statusType: 'live',
+      ctaKind: 'play',
       cta: 'Get Dico on Google Play',
       href: LINKS.dicoPlayStore,
     },
@@ -87,8 +88,29 @@ export const en: Content = {
       platforms: ['Web', 'Google Play', 'Android'],
       status: 'Coming soon',
       statusType: 'soon',
+      ctaKind: 'waitlist',
       cta: 'Join the CoalaHR waitlist',
       href: '#contact',
+    },
+    {
+      id: 'akce',
+      name: 'Akçe Mühendislik',
+      category: 'Web Project',
+      tagline: 'A corporate website we designed and built',
+      description:
+        'A modern, multilingual corporate website we crafted for Akçe Mühendislik — an Istanbul-based industrial engineering company specializing in cryogenic tanks and industrial gas systems. Clean, fast, and built to present their expertise to clients around the world.',
+      features: [
+        { title: 'Multilingual by design', desc: 'Built to speak to clients worldwide, with several language options.' },
+        { title: 'Services & capabilities showcase', desc: 'Their engineering expertise and product range, presented clearly.' },
+        { title: 'Responsive & fast', desc: 'A polished experience on every device, quick to load.' },
+        { title: 'Corporate & credible', desc: 'A professional presence that reflects an international, standards-driven company.' },
+      ],
+      platforms: ['Web'],
+      status: 'Live',
+      statusType: 'live',
+      ctaKind: 'external',
+      cta: 'Visit the site',
+      href: LINKS.akceSite,
     },
   ],
   why: {

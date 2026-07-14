@@ -32,22 +32,24 @@ export function CTA() {
 
         <Reveal delay={0.1}>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
-            {t.products.map((p) =>
-              p.statusType === 'live' ? (
-                <PlayBadge key={p.id} href={p.href} onDark />
-              ) : (
-                <a
-                  key={p.id}
-                  href={p.href}
-                  className={cx(
-                    'inline-flex items-center gap-2 rounded-full border border-ivory/30 px-6 py-3 text-sm font-semibold text-ivory',
-                    'transition-colors duration-200 hover:border-gold hover:bg-gold hover:text-white',
-                  )}
-                >
-                  {p.cta}
-                </a>
-              ),
-            )}
+            {t.products
+              .filter((p) => p.ctaKind !== 'external')
+              .map((p) =>
+                p.ctaKind === 'play' ? (
+                  <PlayBadge key={p.id} href={p.href} onDark />
+                ) : (
+                  <a
+                    key={p.id}
+                    href={p.href}
+                    className={cx(
+                      'inline-flex items-center gap-2 rounded-full border border-ivory/30 px-6 py-3 text-sm font-semibold text-ivory',
+                      'transition-colors duration-200 hover:border-gold hover:bg-gold hover:text-white',
+                    )}
+                  >
+                    {p.cta}
+                  </a>
+                ),
+              )}
           </div>
         </Reveal>
       </div>

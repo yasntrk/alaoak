@@ -1,9 +1,10 @@
 import type { ReactNode } from 'react'
+import { ArrowUpRight } from 'lucide-react'
 import { useSite } from '../lib/site'
 import { Reveal, SectionHeading } from '../lib/reveal'
 import { PlayBadge } from '../components/PlayBadge'
 import { LinkButton } from '../components/ui'
-import { DicoMock, CoalaMock } from '../components/mockups'
+import { DicoMock, CoalaMock, AkceMock } from '../components/mockups'
 import { cx } from '../lib/cx'
 import type { Product } from '../content/types'
 
@@ -23,7 +24,6 @@ function StatusChip({ product }: { product: Product }) {
 }
 
 function ProductBlock({ product, mock, reversed }: { product: Product; mock: ReactNode; reversed: boolean }) {
-  const live = product.statusType === 'live'
   return (
     <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
       <Reveal className={cx(reversed && 'lg:order-2')}>
@@ -48,8 +48,13 @@ function ProductBlock({ product, mock, reversed }: { product: Product; mock: Rea
         </ul>
 
         <div className="mt-8 flex flex-wrap items-center gap-3">
-          {live ? (
+          {product.ctaKind === 'play' ? (
             <PlayBadge href={product.href} />
+          ) : product.ctaKind === 'external' ? (
+            <LinkButton href={product.href} target="_blank" rel="noreferrer" variant="primary" className="group">
+              {product.cta}
+              <ArrowUpRight size={16} className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </LinkButton>
           ) : (
             <LinkButton href={product.href} variant="gold">
               {product.cta}
@@ -82,6 +87,7 @@ export function Products() {
   const mocks: Record<string, ReactNode> = {
     dico: <DicoMock />,
     coalahr: <CoalaMock />,
+    akce: <AkceMock />,
   }
 
   return (

@@ -1,4 +1,4 @@
-import { Search, Volume2, Plus, Users, CalendarCheck, Flame, BarChart3 } from 'lucide-react'
+import { Search, Volume2, Plus, Users, CalendarCheck, Flame, BarChart3, Snowflake, Factory, Gauge } from 'lucide-react'
 import { Mark } from './Logo'
 import { cx } from '../lib/cx'
 
@@ -126,6 +126,76 @@ export function CoalaMock({ className }: { className?: string }) {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+/** Browser preview of the Akçe Mühendislik corporate site we built (steel/industrial theme). */
+export function AkceMock({ className }: { className?: string }) {
+  const tiles = [
+    { icon: Snowflake, label: 'Kriyojenik' },
+    { icon: Gauge, label: 'Regasifikasyon' },
+    { icon: Factory, label: 'Metal İşleme' },
+  ]
+  return (
+    <div className={cx('relative mx-auto w-full max-w-[420px]', className)}>
+      <div className="overflow-hidden rounded-2xl border border-line bg-surface shadow-card">
+        {/* browser bar */}
+        <div className="flex items-center gap-2 border-b border-line bg-ivory-2 px-3 py-2.5">
+          <span className="h-2.5 w-2.5 rounded-full bg-line" />
+          <span className="h-2.5 w-2.5 rounded-full bg-line" />
+          <span className="h-2.5 w-2.5 rounded-full bg-line" />
+          <span className="ml-2 flex-1 truncate rounded-md border border-line bg-surface px-3 py-1 text-[10px] text-muted">
+            ak-ce.com.tr
+          </span>
+        </div>
+        {/* site preview */}
+        <div>
+          {/* site nav */}
+          <div className="flex items-center justify-between bg-[#0f2942] px-4 py-2.5 text-white">
+            <span className="text-sm font-bold tracking-wide">
+              AKÇE <span className="font-normal text-sky-300/90">Mühendislik</span>
+            </span>
+            <span className="hidden gap-3 text-[10px] text-white/70 sm:flex">
+              <span>Hizmetler</span>
+              <span>Galeri</span>
+              <span>İletişim</span>
+            </span>
+          </div>
+          {/* hero */}
+          <div className="relative overflow-hidden bg-gradient-to-br from-[#12324f] to-[#1c4a72] px-4 py-6 text-white">
+            <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-sky-300">Endüstriyel Mühendislik</span>
+            <h4 className="mt-1.5 text-base font-bold leading-snug">Kriyojenik tank &amp; gaz sistemleri</h4>
+            <p className="mt-1 text-[10px] text-white/70">Tasarım, üretim ve montaj · ASME / EN 13458</p>
+            <div className="pointer-events-none absolute -right-1 -top-1 opacity-25">
+              <svg width="88" height="88" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="34" y="14" width="22" height="52" rx="11" stroke="#bfe0ff" strokeWidth="2" />
+                <line x1="34" y1="30" x2="56" y2="30" stroke="#bfe0ff" strokeWidth="1.5" />
+                <line x1="34" y1="50" x2="56" y2="50" stroke="#bfe0ff" strokeWidth="1.5" />
+                <line x1="45" y1="66" x2="45" y2="77" stroke="#bfe0ff" strokeWidth="2" />
+              </svg>
+            </div>
+            <button className="mt-3 rounded-md bg-sky-400/90 px-3 py-1.5 text-[10px] font-semibold text-[#0f2942]">
+              Hizmetlerimiz
+            </button>
+          </div>
+          {/* service tiles */}
+          <div className="grid grid-cols-3 gap-2 bg-white p-3">
+            {tiles.map((tile) => {
+              const Icon = tile.icon
+              return (
+                <div
+                  key={tile.label}
+                  className="flex flex-col items-center gap-1.5 rounded-lg border border-line bg-ivory px-1 py-3 text-center"
+                >
+                  <Icon size={16} className="text-[#1c4a72]" />
+                  <span className="text-[9px] font-medium text-ink">{tile.label}</span>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>
